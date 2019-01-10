@@ -13,9 +13,9 @@
         tools:context=".MainActivity">
 
     <TextView
-            android:layout_height="30pt"
+            android:layout_height="0dp"
             android:id="@+id/tvMain"
-            android:text="0"
+            android:text="@string/text_view"
             android:textSize="20pt"
             android:gravity="center|end"
             android:background="@color/colorTextViewBackground"
@@ -29,19 +29,22 @@
             android:layout_width="match_parent">
 
         <TableRow
+                android:layout_marginBottom="1pt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <Button
-                    android:text="AC"
+                    android:layout_marginEnd="1pt"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btnClear"
                     android:layout_weight="1"
                     android:background="@color/colorButton"
                     android:textSize="19sp"
-            />
+                    android:onClick="allClear"
+                    android:text="@string/clear_button"/>
             <Button
-                    android:text="+/-"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/pos_neg"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btnPosNeg"
@@ -50,16 +53,17 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="%"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/percent"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btnPercent"
                     android:layout_weight="1"
                     android:background="@color/colorButton"
                     android:textSize="19sp"
-                    android:onClick="btnClickEvent"/>
+                    android:onClick="btnPercent"/>
             <Button
-                    android:text="÷"
+                    android:text="@string/div"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btnDivide"
@@ -67,14 +71,16 @@
                     android:background="@color/colorAppleOrange"
                     android:textColor="@color/colorButton"
                     android:textSize="19sp"
-                    android:onClick="btnClickEvent"/>
+                    android:onClick="btnOpEvent"/>
         </TableRow>
 
         <TableRow
+                android:layout_marginBottom="1pt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <Button
-                    android:text="7"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_7"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn7"
@@ -83,7 +89,8 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="8"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_8"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn8"
@@ -92,7 +99,8 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="9"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_9"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn9"
@@ -101,7 +109,6 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="X"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btnMultiply"
@@ -109,14 +116,17 @@
                     android:background="@color/colorAppleOrange"
                     android:textColor="@color/colorButton"
                     android:textSize="19sp"
-                    android:onClick="btnClickEvent"/>
+                    android:onClick="btnOpEvent"
+                    android:text="@string/mult"/>
         </TableRow>
 
         <TableRow
+                android:layout_marginBottom="1pt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <Button
-                    android:text="4"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_4"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn4"
@@ -125,7 +135,8 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="5"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_5"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn5"
@@ -134,7 +145,8 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="6"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_6"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn6"
@@ -143,22 +155,24 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="-"
+                    android:text="@string/sub"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
-                    android:id="@+id/btnMinus"
+                    android:id="@+id/btnSubtract"
                     android:layout_weight="1"
                     android:background="@color/colorAppleOrange"
                     android:textColor="@color/colorButton"
                     android:textSize="19sp"
-                    android:onClick="btnClickEvent"/>
+                    android:onClick="btnOpEvent"/>
         </TableRow>
 
         <TableRow
+                android:layout_marginBottom="1pt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <Button
-                    android:text="1"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_1"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn1"
@@ -167,7 +181,8 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="2"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_2"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn2"
@@ -176,7 +191,8 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="3"
+                    android:layout_marginEnd="1pt"
+                    android:text="@string/btn_3"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
                     android:id="@+id/btn3"
@@ -186,15 +202,15 @@
                     android:textSize="19sp"
                     android:onClick="btnClickEvent"/>
             <Button
-                    android:text="+"
+                    android:text="@string/add"
                     android:layout_width="30pt"
                     android:layout_height="30pt"
-                    android:id="@+id/btnPlus"
+                    android:id="@+id/btnAdd"
                     android:layout_weight="1"
                     android:background="@color/colorAppleOrange"
                     android:textColor="@color/colorButton"
                     android:textSize="19sp"
-                    android:onClick="btnClickEvent"/>
+                    android:onClick="btnOpEvent"/>
         </TableRow>
     </TableLayout>
 
@@ -203,7 +219,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <Button
-                android:text="0"
+                android:layout_marginEnd="1pt"
+                android:text="@string/btn_0"
                 android:layout_width="73pt"
                 android:layout_height="30pt"
                 android:id="@+id/btn0"
@@ -212,7 +229,8 @@
                 android:textSize="19sp"
                 android:onClick="btnClickEvent"/>
         <Button
-                android:text="."
+                android:layout_marginEnd="1pt"
+                android:text="@string/dot"
                 android:layout_width="30pt"
                 android:layout_height="30pt"
                 android:id="@+id/btnDot"
@@ -221,7 +239,7 @@
                 android:textSize="19sp"
                 android:onClick="btnClickEvent"/>
         <Button
-                android:text="="
+                android:text="@string/equals"
                 android:layout_height="30pt"
                 android:layout_width="30pt"
                 android:id="@+id/btnEquals"
@@ -229,6 +247,6 @@
                 android:background="@color/colorAppleOrange"
                 android:textColor="@color/colorButton"
                 android:textSize="19sp"
-        />
+                android:onClick="btnEqualEvent"/>
     </LinearLayout>
 </LinearLayout>
